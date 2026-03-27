@@ -215,7 +215,7 @@ is_ts_tbl <- is_type("ts_tbl")
 #' @export
 as_ts_tbl <- function(x, id_vars = NULL, index_var = NULL, interval = NULL,
                       by_ref = FALSE) {
-
+  print(class(x))
   UseMethod("as_ts_tbl", x)
 }
 
@@ -427,7 +427,7 @@ new_tbl <- function(x, ..., class, by_ref = TRUE) {
     mcols <- meta_vars(x)
     nrows <- nrow(x)
 
-    x <- rm_na(x, mcols, "any")
+    # x <- rm_na(x, mcols, "any")
     x <- sort(x, by = mcols, by_ref = TRUE)
 
     return(x)

@@ -382,8 +382,20 @@ load_ts.src_tbl <- function(x, rows, cols = colnames(x), id_var = id_vars(x),
   }
 
   res <- load_difftime(x, {{ rows }}, cols, id_var, time_vars)
+  print(nrow(res))
+  print(res)
+  print(index_var)
+  print(class(res[[index_var]]))
+  print(units(res[[index_var]]))
+  print(head(res[[index_var]], 20))
+  print(nrow(res))
+  res[[index_var]] <- as.difftime(
+    as.numeric(res[[index_var]]) * 60,
+    units = "secs"
+  )
+  print(nrow(res))
   res <- as_ts_tbl(res, id_vars(res), index_var, secs(1L), by_ref = TRUE)
-
+  print(nrow(res))
   time_vars <- intersect(time_vars, colnames(res))
 
   res <- change_id(res, id_var, x, cols = time_vars, keep_old_id = FALSE)
