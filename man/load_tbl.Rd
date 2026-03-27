@@ -29,7 +29,7 @@ load_id(x, ...)
   cols = colnames(x),
   id_var = id_vars(x),
   interval = hours(1L),
-  time_vars = ricu::time_vars(x),
+  time_vars = ricu_openicu_specific::time_vars(x),
   ...
 )
 
@@ -40,7 +40,7 @@ load_id(x, ...)
   cols = colnames(x),
   id_var = id_vars(x),
   interval = hours(1L),
-  time_vars = ricu::time_vars(x),
+  time_vars = ricu_openicu_specific::time_vars(x),
   ...
 )
 
@@ -55,9 +55,9 @@ load_ts(x, ...)
   rows,
   cols = colnames(x),
   id_var = id_vars(x),
-  index_var = ricu::index_var(x),
+  index_var = ricu_openicu_specific::index_var(x),
   interval = hours(1L),
-  time_vars = ricu::time_vars(x),
+  time_vars = ricu_openicu_specific::time_vars(x),
   ...
 )
 
@@ -67,9 +67,9 @@ load_ts(x, ...)
   x,
   cols = colnames(x),
   id_var = id_vars(x),
-  index_var = ricu::index_var(x),
+  index_var = ricu_openicu_specific::index_var(x),
   interval = hours(1L),
-  time_vars = ricu::time_vars(x),
+  time_vars = ricu_openicu_specific::time_vars(x),
   ...
 )
 
@@ -84,11 +84,11 @@ load_win(x, ...)
   rows,
   cols = colnames(x),
   id_var = id_vars(x),
-  index_var = ricu::index_var(x),
+  index_var = ricu_openicu_specific::index_var(x),
   interval = hours(1L),
-  dur_var = ricu::dur_var(x),
+  dur_var = ricu_openicu_specific::dur_var(x),
   dur_is_end = TRUE,
-  time_vars = ricu::time_vars(x),
+  time_vars = ricu_openicu_specific::time_vars(x),
   ...
 )
 
@@ -98,11 +98,11 @@ load_win(x, ...)
   x,
   cols = colnames(x),
   id_var = id_vars(x),
-  index_var = ricu::index_var(x),
+  index_var = ricu_openicu_specific::index_var(x),
   interval = hours(1L),
-  dur_var = ricu::dur_var(x),
+  dur_var = ricu_openicu_specific::dur_var(x),
   dur_is_end = TRUE,
-  time_vars = ricu::time_vars(x),
+  time_vars = ricu_openicu_specific::time_vars(x),
   ...
 )
 

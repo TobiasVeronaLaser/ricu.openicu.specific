@@ -3,7 +3,7 @@ output <- NULL
 tables <- c("PATIENTS.csv", "SERVICES.csv")
 
 dl_file <- function(x) {
-  ricu:::download_pysionet_file(
+  ricu_openicu_specific:::download_pysionet_file(
     paste("https://physionet.org/files/mimiciii-demo/1.4", x, sep = "/")
   )
 }

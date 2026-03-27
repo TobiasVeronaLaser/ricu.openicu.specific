@@ -1,5 +1,5 @@
 
-srcs_avail <- function(x) all(ricu::is_data_avail(x))
+srcs_avail <- function(x) all(ricu_openicu_specific::is_data_avail(x))
 
 quick_build <- function() {
   identical(Sys.getenv("RICU_VIGNETTE_QUICK_BUILD"), "true")

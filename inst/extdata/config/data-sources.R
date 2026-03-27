@@ -1,7 +1,7 @@
 
 download_pysionet_schema <- function(url) {
 
-  dat <- ricu:::download_pysionet_file(
+  dat <- ricu_openicu_specific:::download_pysionet_file(
     url, dest = NULL, user = NULL, pass = NULL
   )
 
@@ -1782,7 +1782,7 @@ cfg <- list(
   )
 )
 
-ricu::set_config(cfg, "data-sources", cfg_dir)
+ricu_openicu_specific::set_config(cfg, "data-sources", cfg_dir)
 
 cfg <- list(
   list(
@@ -1799,6 +1799,6 @@ cfg <- list(
   )
 )
 
-ricu::set_config(cfg, "data-sources", file.path(pkg_dir, "inst", "testdata"))
+ricu_openicu_specific::set_config(cfg, "data-sources", file.path(pkg_dir, "inst", "testdata"))
 
 devtools::install(pkg_dir)

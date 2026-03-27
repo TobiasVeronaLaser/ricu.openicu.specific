@@ -77,7 +77,7 @@ Attaching a dataset during package namespace loading will both instantiate
 a corresponding \code{src_env} in the \code{data} environment and for convenience
 also assign this object into the package namespace, such that for example
 the MIMIC-III demo dataset not only is available as
-\verb{ricu::data::mimic_demo}, but also as \code{ricu::mimic_demo} (or if the package
+\verb{ricu_openicu_specific::data::mimic_demo}, but also as \code{ricu_openicu_specific::mimic_demo} (or if the package
 namespace is attached, simply as \code{mimic_demo}). Dataset attaching using
 \code{attach_src()} does not need to happen during namespace loading, but can be
 triggered by the user at any time. If such a convenience link as described

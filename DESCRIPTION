@@ -1,5 +1,5 @@
-Package: ricu
-Title: Intensive Care Unit Data with R
+Package: ricu_openicu_specific
+Title: Intensive Care Unit Data with R (openicu specific)
 Description: Focused on (but not exclusive to) data sets hosted on PhysioNet
     (<https://physionet.org>), 'ricu' provides utilities for download, setup
     and access of intensive care unit (ICU) data sets. In addition to

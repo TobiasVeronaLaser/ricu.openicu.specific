@@ -1,6 +1,6 @@
 ---
 title:
-  plain: "ricu: R's Interface to Intensive Care Data"
+  plain: "ricu_openicu_specific: R's Interface to Intensive Care Data"
   formatted: "\\pkg{ricu}: \\proglang{R}'s Interface to Intensive Care Data"
   short: "\\pkg{ricu}: \\proglang{R} meets ICU data"
 author:
@@ -959,7 +959,7 @@ ms_as_min <- function(x) {
 
 aumc_difftime <- function(x, rows, cols = colnames(x),
                           id_hint = id_vars(x),
-                          time_vars = ricu::time_vars(x), ...) {
+                          time_vars = ricu_openicu_specific::time_vars(x), ...) {
 
   if (id_hint %in% colnames(x)) {
     id_sel <- id_hint

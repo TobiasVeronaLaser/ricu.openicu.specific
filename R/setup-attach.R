@@ -40,7 +40,7 @@
 #' a corresponding `src_env` in the `data` environment and for convenience
 #' also assign this object into the package namespace, such that for example
 #' the MIMIC-III demo dataset not only is available as
-#' `ricu::data::mimic_demo`, but also as `ricu::mimic_demo` (or if the package
+#' `ricu_openicu_specific::data::mimic_demo`, but also as `ricu_openicu_specific::mimic_demo` (or if the package
 #' namespace is attached, simply as `mimic_demo`). Dataset attaching using
 #' `attach_src()` does not need to happen during namespace loading, but can be
 #' triggered by the user at any time. If such a convenience link as described

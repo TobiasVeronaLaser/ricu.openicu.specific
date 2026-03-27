@@ -3347,6 +3347,6 @@ cfg <- lapply(cfg, function(x) {
 pkg_dir <- rprojroot::find_root(rprojroot::is_r_package)
 cfg_dir <- file.path(pkg_dir, "inst", "extdata", "config")
 
-ricu::set_config(cfg[order(names(cfg))], "concept-dict", cfg_dir)
+ricu_openicu_specific::set_config(cfg[order(names(cfg))], "concept-dict", cfg_dir)
 
 devtools::install(pkg_dir)
