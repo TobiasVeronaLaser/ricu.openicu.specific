@@ -152,8 +152,8 @@
 #' The exported `data` environment contains all datasets that have been made
 #' available to `ricu`. For datasets that are attached during package loading
 #' (see [attach_src()]), shortcuts to the datasets are set up in the package
-#' namespace, allowing the object `ricu_openicu_specific::data::mimic_demo` to be accessed as
-#' `ricu_openicu_specific::mimic_demo` (or in case the package namespace has been attached,
+#' namespace, allowing the object `ricu.openicu.specific::data::mimic_demo` to be accessed as
+#' `ricu.openicu.specific::mimic_demo` (or in case the package namespace has been attached,
 #' simply as `mimic_demo`). Datasets that are made available after the package
 #' namespace has been sealed will have their proxy object by default located
 #' in `.GlobalEnv`. Datasets are represented by [`src_env`][new_src_env()]

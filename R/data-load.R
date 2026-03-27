@@ -116,7 +116,7 @@ load_difftime <- function(x, ...) UseMethod("load_difftime", x)
 #' @export
 load_difftime.mimic_tbl <- function(x, rows, cols = colnames(x),
                                     id_hint = id_vars(x),
-                                    time_vars = ricu_openicu_specific::time_vars(x), ...) {
+                                    time_vars = ricu.openicu.specific::time_vars(x), ...) {
 
   warn_dots(...)
 
@@ -127,7 +127,7 @@ load_difftime.mimic_tbl <- function(x, rows, cols = colnames(x),
 #' @export
 load_difftime.eicu_tbl <- function(x, rows, cols = colnames(x),
                                    id_hint = id_vars(x),
-                                   time_vars = ricu_openicu_specific::time_vars(x), ...) {
+                                   time_vars = ricu.openicu.specific::time_vars(x), ...) {
 
   warn_dots(...)
 
@@ -138,7 +138,7 @@ load_difftime.eicu_tbl <- function(x, rows, cols = colnames(x),
 #' @export
 load_difftime.hirid_tbl <- function(x, rows, cols = colnames(x),
                                     id_hint = id_vars(x),
-                                    time_vars = ricu_openicu_specific::time_vars(x), ...) {
+                                    time_vars = ricu.openicu.specific::time_vars(x), ...) {
 
   warn_dots(...)
 
@@ -149,7 +149,7 @@ load_difftime.hirid_tbl <- function(x, rows, cols = colnames(x),
 #' @export
 load_difftime.aumc_tbl <- function(x, rows, cols = colnames(x),
                                    id_hint = id_vars(x),
-                                   time_vars = ricu_openicu_specific::time_vars(x), ...) {
+                                   time_vars = ricu.openicu.specific::time_vars(x), ...) {
 
   warn_dots(...)
 
@@ -160,7 +160,7 @@ load_difftime.aumc_tbl <- function(x, rows, cols = colnames(x),
 #' @export
 load_difftime.miiv_tbl <- function(x, rows, cols = colnames(x),
                                    id_hint = id_vars(x),
-                                   time_vars = ricu_openicu_specific::time_vars(x), ...) {
+                                   time_vars = ricu.openicu.specific::time_vars(x), ...) {
 
   warn_dots(...)
 
@@ -171,7 +171,7 @@ load_difftime.miiv_tbl <- function(x, rows, cols = colnames(x),
 #' @export
 load_difftime.sic_tbl <- function(x, rows, cols = colnames(x),
                                   id_hint = id_vars(x),
-                                  time_vars = ricu_openicu_specific::time_vars(x), ...) {
+                                  time_vars = ricu.openicu.specific::time_vars(x), ...) {
   
   sec_as_mins <- function(x) min_as_mins(as.integer(x / 60))
   warn_dots(...)
@@ -322,7 +322,7 @@ load_id <- function(x, ...) UseMethod("load_id", x)
 #' @export
 load_id.src_tbl <- function(x, rows, cols = colnames(x),
                             id_var = id_vars(x), interval = hours(1L),
-                            time_vars = ricu_openicu_specific::time_vars(x), ...) {
+                            time_vars = ricu.openicu.specific::time_vars(x), ...) {
 
   warn_dots(...)
 
@@ -345,7 +345,7 @@ load_id.character <- function(x, src, ...) {
 #' @rdname load_tbl
 #' @export
 load_id.itm <- function(x, cols = colnames(x), id_var = id_vars(x),
-                        interval = hours(1L), time_vars = ricu_openicu_specific::time_vars(x),
+                        interval = hours(1L), time_vars = ricu.openicu.specific::time_vars(x),
                         ...) {
 
   load_id(as_src_tbl(x), !!prepare_query(x), cols, id_var, interval,
@@ -369,9 +369,9 @@ load_ts <- function(x, ...) UseMethod("load_ts", x)
 #' @rdname load_tbl
 #' @export
 load_ts.src_tbl <- function(x, rows, cols = colnames(x), id_var = id_vars(x),
-                            index_var = ricu_openicu_specific::index_var(x),
+                            index_var = ricu.openicu.specific::index_var(x),
                             interval = hours(1L),
-                            time_vars = ricu_openicu_specific::time_vars(x), ...) {
+                            time_vars = ricu.openicu.specific::time_vars(x), ...) {
 
   warn_dots(...)
 
@@ -401,8 +401,8 @@ load_ts.character <- function(x, src, ...) {
 #' @rdname load_tbl
 #' @export
 load_ts.itm <- function(x, cols = colnames(x), id_var = id_vars(x),
-                        index_var = ricu_openicu_specific::index_var(x),
-                        interval = hours(1L), time_vars = ricu_openicu_specific::time_vars(x),
+                        index_var = ricu.openicu.specific::index_var(x),
+                        interval = hours(1L), time_vars = ricu.openicu.specific::time_vars(x),
                         ...) {
 
   load_ts(as_src_tbl(x), !!prepare_query(x), cols, id_var, index_var,
@@ -428,9 +428,9 @@ load_win <- function(x, ...) UseMethod("load_win", x)
 #' @rdname load_tbl
 #' @export
 load_win.src_tbl <- function(x, rows, cols = colnames(x), id_var = id_vars(x),
-                             index_var = ricu_openicu_specific::index_var(x),
-                             interval = hours(1L), dur_var = ricu_openicu_specific::dur_var(x),
-                             dur_is_end = TRUE, time_vars = ricu_openicu_specific::time_vars(x),
+                             index_var = ricu.openicu.specific::index_var(x),
+                             interval = hours(1L), dur_var = ricu.openicu.specific::dur_var(x),
+                             dur_is_end = TRUE, time_vars = ricu.openicu.specific::time_vars(x),
                              ...) {
 
   warn_dots(...)
@@ -462,9 +462,9 @@ load_win.character <- function(x, src, ...) load_win(as_src_tbl(x, src), ...)
 #' @rdname load_tbl
 #' @export
 load_win.itm <- function(x, cols = colnames(x), id_var = id_vars(x),
-                         index_var = ricu_openicu_specific::index_var(x),
-                         interval = hours(1L), dur_var = ricu_openicu_specific::dur_var(x),
-                         dur_is_end = TRUE, time_vars = ricu_openicu_specific::time_vars(x),
+                         index_var = ricu.openicu.specific::index_var(x),
+                         interval = hours(1L), dur_var = ricu.openicu.specific::dur_var(x),
+                         dur_is_end = TRUE, time_vars = ricu.openicu.specific::time_vars(x),
                          ...) {
 
   load_win(as_src_tbl(x), !!prepare_query(x), cols, id_var, index_var,

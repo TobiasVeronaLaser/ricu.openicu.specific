@@ -17,8 +17,8 @@
 The exported \code{data} environment contains all datasets that have been made
 available to \code{ricu}. For datasets that are attached during package loading
 (see \code{\link[=attach_src]{attach_src()}}), shortcuts to the datasets are set up in the package
-namespace, allowing the object \verb{ricu_openicu_specific::data::mimic_demo} to be accessed as
-\code{ricu_openicu_specific::mimic_demo} (or in case the package namespace has been attached,
+namespace, allowing the object \verb{ricu.openicu.specific::data::mimic_demo} to be accessed as
+\code{ricu.openicu.specific::mimic_demo} (or in case the package namespace has been attached,
 simply as \code{mimic_demo}). Datasets that are made available after the package
 namespace has been sealed will have their proxy object by default located
 in \code{.GlobalEnv}. Datasets are represented by \code{\link[=new_src_env]{src_env}}

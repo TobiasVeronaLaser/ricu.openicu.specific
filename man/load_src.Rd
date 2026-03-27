@@ -27,7 +27,7 @@ load_difftime(x, ...)
   rows,
   cols = colnames(x),
   id_hint = id_vars(x),
-  time_vars = ricu_openicu_specific::time_vars(x),
+  time_vars = ricu.openicu.specific::time_vars(x),
   ...
 )
 
@@ -36,7 +36,7 @@ load_difftime(x, ...)
   rows,
   cols = colnames(x),
   id_hint = id_vars(x),
-  time_vars = ricu_openicu_specific::time_vars(x),
+  time_vars = ricu.openicu.specific::time_vars(x),
   ...
 )
 
@@ -45,7 +45,7 @@ load_difftime(x, ...)
   rows,
   cols = colnames(x),
   id_hint = id_vars(x),
-  time_vars = ricu_openicu_specific::time_vars(x),
+  time_vars = ricu.openicu.specific::time_vars(x),
   ...
 )
 
@@ -54,7 +54,7 @@ load_difftime(x, ...)
   rows,
   cols = colnames(x),
   id_hint = id_vars(x),
-  time_vars = ricu_openicu_specific::time_vars(x),
+  time_vars = ricu.openicu.specific::time_vars(x),
   ...
 )
 
@@ -63,7 +63,7 @@ load_difftime(x, ...)
   rows,
   cols = colnames(x),
   id_hint = id_vars(x),
-  time_vars = ricu_openicu_specific::time_vars(x),
+  time_vars = ricu.openicu.specific::time_vars(x),
   ...
 )
 
@@ -72,7 +72,7 @@ load_difftime(x, ...)
   rows,
   cols = colnames(x),
   id_hint = id_vars(x),
-  time_vars = ricu_openicu_specific::time_vars(x),
+  time_vars = ricu.openicu.specific::time_vars(x),
   ...
 )
 

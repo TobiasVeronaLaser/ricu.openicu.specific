@@ -26,7 +26,7 @@ utilities for working with the arising types of time series datasets.
 To cite `ricu`, please use the following:
 ```
 @article{bennett2023ricu,
-  title={ricu_openicu_specific: R’s interface to intensive care data},
+  title={ricu.openicu.specific: R’s interface to intensive care data},
   author={Bennett, Nicolas and Ple{\v{c}}ko, Drago and Ukor, Ida-Fong and Meinshausen, Nicolai and B{\"u}hlmann, Peter},
   journal={GigaScience},
   volume={12},
